@@ -32,10 +32,15 @@ PlayState.create = function () {
     this.addChild(this.bg);
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
-    this.addHiddenObject('1', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('2', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('3', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('4', Math.random() * 600, Math.random() * 700);
+    this.addHiddenObject('1', Math.random() * 600, Math.random() * 100);
+    this.addHiddenObject('2', Math.random() * 600, Math.random() * 100 + 200);
+    this.addHiddenObject('3', Math.random() * 600, Math.random() * 100 + 400);
+    this.addHiddenObject('4', Math.random() * 600, Math.random() * 100 + 600);
+	
+	this.addBaseButton('1',1);
+	this.addBaseButton('2',2);
+	this.addBaseButton('3',3);
+	this.addBaseButton('4',4);
 }
 
 
@@ -55,16 +60,18 @@ PlayState.addHiddenObject = function (objName, objX, objY) {
     this['hiddenObject' + objName].objName = objName;
     this['hiddenObject' + objName].input.onDown.add(this.clickObject, this);
     this.addChild(this['hiddenObject' + objName]);
+	
+	this.hiddenObjects.push(this['hiddenObject' + objName]);
+}
 
+PlayState.addBaseButton = function (objName, objIndex) {
     //UI Base of each preview button
-    this['UIBase' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 110 * this.hiddenObjects.length + 50, 900);
+    this['UIBase' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 100 * objIndex + 100, 900);
     this.addChild(this['UIBase' + objName])
 
     //UI preview image
-    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName + '_l1'], 110 * this.hiddenObjects.length + 50, 900);
+    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName + '_l1'], 100 * objIndex + 100, 900);
     this.addChild(this['UIButton' + objName]);
-
-    this.hiddenObjects.push(this['hiddenObject' + objName]);
 }
 
 
@@ -90,6 +97,6 @@ PlayState.clickObject = function (hiddenObj) {
 
     //completion
     if (allFound) {
-        this.gameComplete = true;
+        this.game.states.switchState( "PlayState2" );
     }
 }

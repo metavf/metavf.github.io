@@ -42,6 +42,17 @@ LoadingState.preload = function () {
     this.addImage('UI_2_l1', 'assets/img/UI_2_l1.png');
     this.addImage('UI_3_l1', 'assets/img/UI_3_l1.png');
     this.addImage('UI_4_l1', 'assets/img/UI_4_l1.png');
+	
+	this.addImage('bg_l2', 'assets/img/bg_l2.png');
+    this.addImage('hidden_1_l2', 'assets/img/hidden_1_l2.png');
+    this.addImage('hidden_2_l2', 'assets/img/hidden_2_l2.png');
+    this.addImage('hidden_3_l2', 'assets/img/hidden_3_l2.png');
+    this.addImage('hidden_4_l2', 'assets/img/hidden_4_l2.png');
+	this.addImage('UI_1_l2', 'assets/img/UI_1_l2.png');
+    this.addImage('UI_2_l2', 'assets/img/UI_2_l2.png');
+    this.addImage('UI_3_l2', 'assets/img/UI_3_l2.png');
+    this.addImage('UI_4_l2', 'assets/img/UI_4_l2.png');
+	
     this.addImage('UI_btn', 'assets/img/UI_btn.png');
 };
 

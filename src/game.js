@@ -15,6 +15,7 @@ var game = new Kiwi.Game('content', 'SintSpelHerman', null, { renderer: Kiwi.REN
 game.states.addState(LoadingState);
 game.states.addState(IntroState);
 game.states.addState(PlayState);
+game.states.addState(PlayState2);
 
 //Switch to/use the Preloader state. 
 game.states.switchState("LoadingState");
