@@ -33,18 +33,15 @@ LoadingState.preload = function () {
     //Otherwise the loading graphics will load last, and that defies the whole point in loading them. 
     KiwiLoadingScreen.prototype.preload.call(this);
 
-    this.addImage('bg', 'assets/img/bg.png');
-    this.addImage('hidden_1', 'assets/img/hidden_1.png');
-    this.addImage('hidden_2', 'assets/img/hidden_2.png');
-    this.addImage('hidden_3', 'assets/img/hidden_3.png');
-    this.addImage('hidden_4', 'assets/img/hidden_4.png');
-    this.addImage('hidden_5', 'assets/img/hidden_5.png');
-    this.addImage('UI_1', 'assets/img/UI_1.png');
-    this.addImage('UI_2', 'assets/img/UI_2.png');
-    this.addImage('UI_3', 'assets/img/UI_3.png');
-    this.addImage('UI_4', 'assets/img/UI_4.png');
-    this.addImage('UI_5', 'assets/img/UI_5.png');
+    this.addImage('bg_l1', 'assets/img/bg_l1.png');
+    this.addImage('hidden_1_l1', 'assets/img/hidden_1_l1.png');
+    this.addImage('hidden_2_l1', 'assets/img/hidden_2_l1.png');
+    this.addImage('hidden_3_l1', 'assets/img/hidden_3_l1.png');
+    this.addImage('hidden_4_l1', 'assets/img/hidden_4_l1.png');
+    this.addImage('UI_1_l1', 'assets/img/UI_1_l1.png');
+    this.addImage('UI_2_l1', 'assets/img/UI_2_l1.png');
+    this.addImage('UI_3_l1', 'assets/img/UI_3_l1.png');
+    this.addImage('UI_4_l1', 'assets/img/UI_4_l1.png');
     this.addImage('UI_btn', 'assets/img/UI_btn.png');
-    this.addImage('hint_btn', 'assets/img/hint.png');
 };
 

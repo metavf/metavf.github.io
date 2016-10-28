@@ -28,27 +28,14 @@ PlayState.create = function () {
 
 
     //Add bg
-    this.bg = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.bg, 0, 0);
+    this.bg = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.bg_l1, 0, 0);
     this.addChild(this.bg);
-
-
-    //Add hint button
-    this.hintBtn = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 618, 900);
-    this.addChild(this.hintBtn);
-
-    //Add hint icon button
-    this.hintIcon = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.hint_btn, 618, 900);
-    this.addChild(this.hintIcon);
-
-
-    this.hintBtn.input.onDown.add(this.doHint, this);
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
     this.addHiddenObject('1', Math.random() * 600, Math.random() * 700);
     this.addHiddenObject('2', Math.random() * 600, Math.random() * 700);
     this.addHiddenObject('3', Math.random() * 600, Math.random() * 700);
     this.addHiddenObject('4', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('5', Math.random() * 600, Math.random() * 700);
 }
 
 
@@ -64,7 +51,7 @@ PlayState.create = function () {
 PlayState.addHiddenObject = function (objName, objX, objY) {
 
     //Object hidden on the stage
-    this['hiddenObject' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['hidden_' + objName], objX, objY);
+    this['hiddenObject' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['hidden_' + objName+ '_l1'], objX, objY);
     this['hiddenObject' + objName].objName = objName;
     this['hiddenObject' + objName].input.onDown.add(this.clickObject, this);
     this.addChild(this['hiddenObject' + objName]);
@@ -74,37 +61,10 @@ PlayState.addHiddenObject = function (objName, objX, objY) {
     this.addChild(this['UIBase' + objName])
 
     //UI preview image
-    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName], 110 * this.hiddenObjects.length + 50, 900);
+    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName + '_l1'], 110 * this.hiddenObjects.length + 50, 900);
     this.addChild(this['UIButton' + objName]);
 
     this.hiddenObjects.push(this['hiddenObject' + objName]);
-}
-
-
-/**
-* This method scales a hidden object when the user wants a hint of where the a item is.
-*
-* @method doHint
-* @public
-*/
-PlayState.doHint = function () {
-    //if hint is already active, deselect current hint instead
-    if (!this.gameComplete) {
-        for (var i in this.hiddenObjects) {
-            this.hiddenObjects[i].transform.scaleX = 1;
-            this.hiddenObjects[i].transform.scaleY = 1;
-        }
-        
-        //get hidden ones, randomize selection and scale.
-        var rand = Math.floor(Math.random() * this.hiddenObjects.length);
-        if (this.hiddenObjects[rand].visible) {
-            this.hiddenObjects[rand].transform.scaleX = 1.5;
-            this.hiddenObjects[rand].transform.scaleY = 1.5;
-        } else {
-            //try aain if the selected one's been found
-            this.doHint();
-        }
-    }
 }
 
 

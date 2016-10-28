@@ -9,7 +9,7 @@
 
 
 //Initialise the Kiwi Game. 
-var game = new Kiwi.Game('content', 'HiddenObjectBlueprint', null, { renderer: Kiwi.RENDERER_CANVAS });
+var game = new Kiwi.Game('content', 'SintSpelHerman', null, { renderer: Kiwi.RENDERER_CANVAS });
 
 //Add all the States we are going to use.
 game.states.addState(LoadingState);
