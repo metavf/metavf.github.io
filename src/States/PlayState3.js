@@ -102,6 +102,12 @@ PlayState3.clickObject = function (hiddenObj) {
 
     //completion
     if (allFound) {
-        this.game.states.switchState( "PlayState1" );
+		setTimeout(this.continueExecution, 1000) //wait one seconds before continuing
     }
+}
+
+PlayState3.continueExecution = function ()
+{
+   //finish doing things after the pause
+   this.game.states.switchState( "PlayState" );
 }
