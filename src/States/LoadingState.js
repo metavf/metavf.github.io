@@ -53,6 +53,20 @@ LoadingState.preload = function () {
     this.addImage('UI_3_l2', 'assets/img/UI_3_l2.png');
     this.addImage('UI_4_l2', 'assets/img/UI_4_l2.png');
 	
+	this.addImage('bg_l3', 'assets/img/bg_l3.png');
+    this.addImage('hidden_1_l3', 'assets/img/hidden_1_l3.png');
+    this.addImage('hidden_2_l3', 'assets/img/hidden_2_l3.png');
+    this.addImage('hidden_3_l3', 'assets/img/hidden_3_l3.png');
+    this.addImage('hidden_4_l3', 'assets/img/hidden_4_l3.png');
+	this.addImage('hidden_5_l3', 'assets/img/hidden_5_l3.png');
+    this.addImage('hidden_6_l3', 'assets/img/hidden_6_l3.png');
+	this.addImage('UI_1_l3', 'assets/img/UI_1_l3.png');
+    this.addImage('UI_2_l3', 'assets/img/UI_2_l3.png');
+    this.addImage('UI_3_l3', 'assets/img/UI_3_l3.png');
+    this.addImage('UI_4_l3', 'assets/img/UI_4_l3.png');
+	this.addImage('UI_5_l3', 'assets/img/UI_5_l3.png');
+    this.addImage('UI_6_l3', 'assets/img/UI_6_l3.png');
+	
     this.addImage('UI_btn', 'assets/img/UI_btn.png');
 };
 

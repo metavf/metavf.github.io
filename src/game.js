@@ -16,6 +16,7 @@ game.states.addState(LoadingState);
 game.states.addState(IntroState);
 game.states.addState(PlayState);
 game.states.addState(PlayState2);
+game.states.addState(PlayState3);
 
 //Switch to/use the Preloader state. 
 game.states.switchState("LoadingState");

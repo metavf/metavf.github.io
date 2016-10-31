@@ -98,6 +98,6 @@ PlayState2.clickObject = function (hiddenObj) {
 
     //completion
     if (allFound) {
-        this.game.states.switchState( "PlayState22" );
+        this.game.states.switchState( "PlayState3" );
     }
 }
