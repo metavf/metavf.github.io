@@ -10,6 +10,6 @@ var IntroState = new Kiwi.State('IntroState');
 IntroState.create = function () {
 
     //This state is currently skipped, but can be used as a main menu page.
-    game.states.switchState("PlayState1");
+    game.states.switchState("PlayState");
     
 }
