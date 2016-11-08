@@ -32,7 +32,10 @@ LoadingState.preload = function () {
     //Make sure to call the super at the top.
     //Otherwise the loading graphics will load last, and that defies the whole point in loading them. 
     KiwiLoadingScreen.prototype.preload.call(this);
-
+	
+	this.addImage('playButton', 'assets/img/playbutton.png');
+	this.addImage('bg_intro', 'assets/img/bg_intro.png');
+	
     this.addImage('bg_l1', 'assets/img/bg_l1.png');
     this.addImage('hidden_1_l1', 'assets/img/hidden_1_l1.png');
     this.addImage('hidden_2_l1', 'assets/img/hidden_2_l1.png');
