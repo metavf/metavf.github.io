@@ -14,6 +14,9 @@ IntroState.create = function () {
     this.addChild(this.bg);
 	
 	this.addPlayButton(252,350)
+	
+	this.backgroundMusic = new Kiwi.Sound.Audio( this.game, 'backgroundMusic', 0.3, true );
+	this.backgroundMusic.play();
 }
 
 IntroState.addPlayButton = function (objX, objY) {

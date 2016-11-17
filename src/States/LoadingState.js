@@ -71,5 +71,7 @@ LoadingState.preload = function () {
     this.addImage('UI_6_l3', 'assets/img/UI_6_l3.png');
 	
     this.addImage('UI_btn', 'assets/img/UI_btn.png');
+	
+	this.addAudio('backgroundMusic', 'assets/music/sinterklaasmedley.mp3' );
 };
 
