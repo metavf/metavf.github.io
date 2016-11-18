@@ -25,9 +25,6 @@ PlayState.create = function () {
     //Create our Hidden Object Arrays, This will store all of our hidden objects.
     this.hiddenObjects = [];
     this.gameComplete = false;
-	
-	// Add audio
-	this.boingSound = new Kiwi.Sound.Audio(this.game, "boing", 1, false );
 
 
     //Add bg
@@ -86,8 +83,6 @@ PlayState.addBaseButton = function (objName, objIndex) {
 * @param hiddenObj{Sprite}
 */
 PlayState.clickObject = function (hiddenObj) {
-	// play sound
-	this.boing.play();
 	
     //remove object and associated UI btn
     hiddenObj.visible = false;
