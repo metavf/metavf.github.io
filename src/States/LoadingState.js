@@ -36,6 +36,9 @@ LoadingState.preload = function () {
 	this.addImage('playButton', 'assets/img/playbutton.png');
 	this.addImage('bg_intro', 'assets/img/bg_intro.png');
 	
+	this.addImage('replayButton', 'assets/img/replaybutton.png');
+	this.addImage('bg_final', 'assets/img/bg_final.png');
+	
     this.addImage('bg_l1', 'assets/img/bg_l1.png');
     this.addImage('hidden_1_l1', 'assets/img/hidden_1_l1.png');
     this.addImage('hidden_2_l1', 'assets/img/hidden_2_l1.png');

@@ -109,5 +109,5 @@ PlayState3.clickObject = function (hiddenObj) {
 PlayState3.continueExecution = function ()
 {
    //finish doing things after the pause
-   this.game.states.switchState( "PlayState" );
+   this.game.states.switchState( "FinalState" );
 }
